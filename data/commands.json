@@ -9,7 +9,7 @@
     "command": "/checkpoint",
     "category": "会話管理",
     "description": "会話・コードを前の時点に巻き戻す",
-    "detail": "/rewind のエイリアス。チェックポイントに巻き戻します。"
+    "detail": "/rewind のエイリアス。チェックポイントに巻き戻します。例：/checkpoint"
   },
   {
     "command": "/clear",
@@ -57,13 +57,13 @@
     "command": "/new",
     "category": "会話管理",
     "description": "新しい会話を開始する",
-    "detail": "/clear のエイリアス。新しい会話を開始します。"
+    "detail": "/clear のエイリアス。新しい会話を開始します。例：/new"
   },
   {
     "command": "/recap",
     "category": "会話管理",
     "description": "現在のセッションの要約を生成する",
-    "detail": "セッションの1行要約をオンデマンドで生成します。"
+    "detail": "セッションの1行要約をオンデマンドで生成します。例：/recap"
   },
   {
     "command": "/rename",
@@ -75,7 +75,7 @@
     "command": "/reset",
     "category": "会話管理",
     "description": "新しい会話を開始する",
-    "detail": "/clear のエイリアス。新しい会話を開始します。"
+    "detail": "/clear のエイリアス。新しい会話を開始します。例：/reset"
   },
   {
     "command": "/resume",
@@ -93,13 +93,13 @@
     "command": "/share",
     "category": "会話管理",
     "description": "フィードバックを送信・会話を共有する",
-    "detail": "/feedback のエイリアス。バグ報告や会話共有ができます。"
+    "detail": "/feedback のエイリアス。バグ報告や会話共有ができます。例：/share"
   },
   {
     "command": "/undo",
     "category": "会話管理",
     "description": "会話・コードを前の時点に巻き戻す",
-    "detail": "/rewind のエイリアス。チェックポイントに巻き戻します。"
+    "detail": "/rewind のエイリアス。チェックポイントに巻き戻します。例：/undo"
   },
   {
     "command": "/color",
@@ -111,7 +111,7 @@
     "command": "/config",
     "category": "カスタマイズ",
     "description": "設定インターフェースを開く",
-    "detail": "テーマ、モデル、出力スタイルなどを調整します。エイリアス: /settings"
+    "detail": "テーマ、モデル、出力スタイルなどを調整します。例：/config"
   },
   {
     "command": "/effort",
@@ -129,13 +129,13 @@
     "command": "/focus",
     "category": "カスタマイズ",
     "description": "フォーカスビューを切り替える",
-    "detail": "最後のプロンプトと最終応答のみ表示します。フルスクリーン時のみ利用可能。"
+    "detail": "最後のプロンプトと最終応答のみ表示します。例：/focus"
   },
   {
     "command": "/keybindings",
     "category": "カスタマイズ",
     "description": "キーバインディング設定ファイルを開く",
-    "detail": "キーバインディング設定ファイルを開くか作成します。"
+    "detail": "キーバインディング設定ファイルを開くか作成します。例：/keybindings"
   },
   {
     "command": "/model",
@@ -147,13 +147,13 @@
     "command": "/scroll-speed",
     "category": "カスタマイズ",
     "description": "マウスホイールのスクロール速度を調整する",
-    "detail": "スクロール速度をインタラクティブに調整します。フルスクリーン時のみ利用可能。"
+    "detail": "スクロール速度をインタラクティブに調整します。例：/scroll-speed"
   },
   {
     "command": "/settings",
     "category": "カスタマイズ",
     "description": "設定インターフェースを開く",
-    "detail": "/config のエイリアス。各種設定を調整します。"
+    "detail": "/config のエイリアス。各種設定を調整します。例：/settings"
   },
   {
     "command": "/theme",
@@ -195,13 +195,13 @@
     "command": "/diff",
     "category": "コード品質",
     "description": "インタラクティブなdiffビューアを開く",
-    "detail": "コミットされていない変更と各ターンのdiffを表示します。"
+    "detail": "コミットされていない変更と各ターンのdiffを表示します。例：/diff"
   },
   {
     "command": "/doctor",
     "category": "コード品質",
     "description": "Claude Codeのインストールと設定を診断する",
-    "detail": "インストールと設定を診断します。「f」で問題を自動修正。"
+    "detail": "インストールと設定を診断します。「f」で問題を自動修正。例：/doctor"
   },
   {
     "command": "/review",
@@ -213,13 +213,13 @@
     "command": "/run",
     "category": "コード品質",
     "description": "プロジェクトのアプリを起動して変更を確認する",
-    "detail": "アプリを実際に起動して変更が動作しているか確認します。"
+    "detail": "アプリを実際に起動して変更が動作しているか確認します。例：/run"
   },
   {
     "command": "/run-skill-generator",
     "category": "コード品質",
     "description": "/runと/verify用のプロジェクトスキルを作成する",
-    "detail": "/run と /verify にアプリの起動方法を教えるスキルを作成します。"
+    "detail": "/run と /verify にアプリの起動方法を教えるスキルを作成します。例：/run-skill-generator"
   },
   {
     "command": "/security-review",
@@ -243,13 +243,13 @@
     "command": "/verify",
     "category": "コード品質",
     "description": "実行中のアプリでコード変更を確認する",
-    "detail": "アプリをビルドして実行し、テストではなく実際の動作を確認します。"
+    "detail": "アプリをビルドして実行し、実際の動作を確認します。例：/verify"
   },
   {
     "command": "/agents",
     "category": "エージェント・並列",
     "description": "サブエージェントマネージャーを開く",
-    "detail": "サブエージェントのマネージャーを開き、バックグラウンドエージェントを管理します。"
+    "detail": "バックグラウンドエージェントを管理するマネージャーを開きます。例：/agents"
   },
   {
     "command": "/background",
@@ -279,7 +279,7 @@
     "command": "/routines",
     "category": "エージェント・並列",
     "description": "スケジュールされたルーティンを管理する",
-    "detail": "/schedule のエイリアス。ルーティンを管理します。"
+    "detail": "/schedule のエイリアス。ルーティンを管理します。例：/routines"
   },
   {
     "command": "/schedule",
@@ -291,13 +291,13 @@
     "command": "/stop",
     "category": "エージェント・並列",
     "description": "現在のバックグラウンドセッションを停止する",
-    "detail": "バックグラウンドセッションを停止します。トランスクリプトとworktreeは保持。"
+    "detail": "バックグラウンドセッションを停止します。トランスクリプトとworktreeは保持。例：/stop"
   },
   {
     "command": "/tasks",
     "category": "エージェント・並列",
     "description": "バックグラウンドタスクをリスト・管理する",
-    "detail": "バックグラウンドタスクを一覧表示・管理します。エイリアス: /bashes"
+    "detail": "バックグラウンドタスクを一覧表示・管理します。例：/tasks"
   },
   {
     "command": "/ultraplan",
@@ -309,13 +309,13 @@
     "command": "/workflows",
     "category": "エージェント・並列",
     "description": "ワークフロー進捗ビューを開く",
-    "detail": "実行中・完了したワークフローを監視・一時停止・再開できます。"
+    "detail": "実行中・完了したワークフローを監視・一時停止・再開できます。例：/workflows"
   },
   {
     "command": "/allowed-tools",
     "category": "設定・管理",
     "description": "ツール権限を管理する",
-    "detail": "/permissions のエイリアス。ツール権限を管理します。"
+    "detail": "/permissions のエイリアス。ツール権限を管理します。例：/allowed-tools"
   },
   {
     "command": "/autofix-pr",
@@ -333,25 +333,25 @@
     "command": "/fewer-permission-prompts",
     "category": "設定・管理",
     "description": "権限プロンプトを減らすための許可リストを追加する",
-    "detail": "よく使うツールをスキャンし設定ファイルに許可リストを追加します。"
+    "detail": "よく使うツールをスキャンし設定ファイルに許可リストを追加します。例：/fewer-permission-prompts"
   },
   {
     "command": "/hooks",
     "category": "設定・管理",
     "description": "フック設定を表示する",
-    "detail": "PreToolUse・PostToolUseなどのフック設定を表示します。"
+    "detail": "PreToolUse・PostToolUseなどのフック設定を表示します。例：/hooks"
   },
   {
     "command": "/ide",
     "category": "設定・管理",
     "description": "IDE統合を管理する",
-    "detail": "VS Code・JetBrainsなどとのIDE統合状況を管理・表示します。"
+    "detail": "VS Code・JetBrainsなどとのIDE統合状況を管理・表示します。例：/ide"
   },
   {
     "command": "/init",
     "category": "設定・管理",
     "description": "CLAUDE.mdガイドでプロジェクトを初期化する",
-    "detail": "プロジェクトにCLAUDE.mdを生成します。"
+    "detail": "プロジェクトにCLAUDE.mdを生成します。例：/init"
   },
   {
     "command": "/mcp",
@@ -369,7 +369,7 @@
     "command": "/permissions",
     "category": "設定・管理",
     "description": "ツール権限を管理する",
-    "detail": "許可・確認・拒否ルールを管理するダイアログを開きます。エイリアス: /allowed-tools"
+    "detail": "許可・確認・拒否ルールを管理するダイアログを開きます。例：/permissions"
   },
   {
     "command": "/plugin",
@@ -381,31 +381,31 @@
     "command": "/reload-plugins",
     "category": "設定・管理",
     "description": "アクティブなプラグインを再読み込みする",
-    "detail": "再起動せずプラグインの変更を反映します。"
+    "detail": "再起動せずプラグインの変更を反映します。例：/reload-plugins"
   },
   {
     "command": "/reload-skills",
     "category": "設定・管理",
     "description": "スキルとコマンドディレクトリを再スキャンする",
-    "detail": "再起動せずスキルの変更を反映します。"
+    "detail": "再起動せずスキルの変更を反映します。例：/reload-skills"
   },
   {
     "command": "/remote-control",
     "category": "設定・管理",
     "description": "このセッションをclaude.aiからリモートコントロール可能にする",
-    "detail": "別のデバイスからこのセッションを続行できます。エイリアス: /rc"
+    "detail": "別のデバイスからこのセッションを続行できます。例：/remote-control"
   },
   {
     "command": "/remote-env",
     "category": "設定・管理",
     "description": "リモートウェブセッションのデフォルト環境を設定する",
-    "detail": "--remoteで開始したウェブセッションのデフォルト環境を構成します。"
+    "detail": "--remoteで開始したウェブセッションのデフォルト環境を構成します。例：/remote-env"
   },
   {
     "command": "/terminal-setup",
     "category": "設定・管理",
     "description": "ターミナルキーバインディングを設定する",
-    "detail": "Shift+Enterなどのショートカットを構成します。対応ターミナルのみ表示。"
+    "detail": "Shift+Enterなどのショートカットを構成します。例：/terminal-setup"
   },
   {
     "command": "/claude-api",
@@ -417,126 +417,126 @@
     "command": "/setup-bedrock",
     "category": "接続・外部サービス",
     "description": "Amazon Bedrockを設定する",
-    "detail": "Bedrock認証・リージョン・モデルを設定します。CLAUDE_CODE_USE_BEDROCK=1 が必要。"
+    "detail": "Bedrock認証・リージョン・モデルを設定します。例：/setup-bedrock"
   },
   {
     "command": "/setup-vertex",
     "category": "接続・外部サービス",
     "description": "Google Vertex AIを設定する",
-    "detail": "Vertex AI認証・プロジェクト・リージョンを設定します。CLAUDE_CODE_USE_VERTEX=1 が必要。"
+    "detail": "Vertex AI認証・プロジェクト・リージョンを設定します。例：/setup-vertex"
   },
   {
     "command": "/bug",
     "category": "アカウント・情報",
     "description": "バグを報告する",
-    "detail": "/feedback のエイリアス。バグ報告や会話共有ができます。"
+    "detail": "/feedback のエイリアス。バグ報告や会話共有ができます。例：/bug"
   },
   {
     "command": "/cost",
     "category": "アカウント・情報",
     "description": "セッションコストと使用状況を表示する",
-    "detail": "/usage のエイリアス。コスト・使用制限を表示します。"
+    "detail": "/usage のエイリアス。コスト・使用制限を表示します。例：/cost"
   },
   {
     "command": "/exit",
     "category": "アカウント・情報",
     "description": "CLIを終了する",
-    "detail": "CLIを終了します。バックグラウンドセッションはデタッチして継続。エイリアス: /quit"
+    "detail": "CLIを終了します。バックグラウンドセッションはデタッチして継続。例：/exit"
   },
   {
     "command": "/feedback",
     "category": "アカウント・情報",
     "description": "フィードバックを送信・バグを報告する",
-    "detail": "フィードバック送信・バグ報告・会話共有ができます。エイリアス: /bug、/share"
+    "detail": "フィードバック送信・バグ報告・会話共有ができます。例：/feedback"
   },
   {
     "command": "/heapdump",
     "category": "アカウント・情報",
     "description": "メモリ診断用のヒープスナップショットを書き込む",
-    "detail": "高いメモリ使用量を診断するためヒープスナップショットを~/Desktopに出力します。"
+    "detail": "高いメモリ使用量を診断するためヒープスナップショットを出力します。例：/heapdump"
   },
   {
     "command": "/help",
     "category": "アカウント・情報",
     "description": "ヘルプと利用可能なコマンドを表示する",
-    "detail": "ヘルプと利用可能なコマンドの一覧を表示します。"
+    "detail": "ヘルプと利用可能なコマンドの一覧を表示します。例：/help"
   },
   {
     "command": "/insights",
     "category": "アカウント・情報",
     "description": "セッション分析レポートを生成する",
-    "detail": "プロジェクト領域・相互作用パターン・摩擦点を含むレポートを生成します。"
+    "detail": "プロジェクト領域・相互作用パターン・摩擦点を含むレポートを生成します。例：/insights"
   },
   {
     "command": "/login",
     "category": "アカウント・情報",
     "description": "Anthropicアカウントにサインインする",
-    "detail": "Anthropicアカウントにサインインします。"
+    "detail": "Anthropicアカウントにサインインします。例：/login"
   },
   {
     "command": "/logout",
     "category": "アカウント・情報",
     "description": "Anthropicアカウントからサインアウトする",
-    "detail": "現在のAnthropicアカウントからサインアウトします。"
+    "detail": "現在のAnthropicアカウントからサインアウトします。例：/logout"
   },
   {
     "command": "/passes",
     "category": "アカウント・情報",
     "description": "無料1週間を友人と共有する",
-    "detail": "Claude Codeの無料1週間を友人と共有します。対象アカウントのみ表示。"
+    "detail": "Claude Codeの無料1週間を友人と共有します。例：/passes"
   },
   {
     "command": "/powerup",
     "category": "アカウント・情報",
     "description": "Claude Code機能をインタラクティブに学ぶ",
-    "detail": "アニメーション付きのインタラクティブレッスンでClaude Code機能を発見します。"
+    "detail": "アニメーション付きのインタラクティブレッスンでClaude Code機能を発見します。例：/powerup"
   },
   {
     "command": "/privacy-settings",
     "category": "アカウント・情報",
     "description": "プライバシー設定を表示・更新する",
-    "detail": "プライバシー設定を表示・更新します。Pro・Maxプランのみ利用可能。"
+    "detail": "プライバシー設定を表示・更新します。Pro・Maxプランのみ利用可能。例：/privacy-settings"
   },
   {
     "command": "/stats",
     "category": "アカウント・情報",
     "description": "使用状況をStatsタブで表示する",
-    "detail": "/usage のエイリアス。Statsタブで使用状況を表示します。"
+    "detail": "/usage のエイリアス。Statsタブで使用状況を表示します。例：/stats"
   },
   {
     "command": "/status",
     "category": "アカウント・情報",
     "description": "バージョン・モデル・接続性を表示する",
-    "detail": "バージョン・モデル・アカウント・接続性を表示します。応答中でも動作します。"
+    "detail": "バージョン・モデル・アカウント・接続性を表示します。例：/status"
   },
   {
     "command": "/stickers",
     "category": "アカウント・情報",
     "description": "Claude Codeステッカーを注文する",
-    "detail": "Claude Codeステッカーを注文します。"
+    "detail": "Claude Codeステッカーを注文します。例：/stickers"
   },
   {
     "command": "/team-onboarding",
     "category": "アカウント・情報",
     "description": "チームオンボーディングガイドを生成する",
-    "detail": "過去30日のセッション履歴からチーム向けガイドを生成します。"
+    "detail": "過去30日のセッション履歴からチーム向けガイドを生成します。例：/team-onboarding"
   },
   {
     "command": "/upgrade",
     "category": "アカウント・情報",
     "description": "より高いプランにアップグレードする",
-    "detail": "アップグレードページを開いてプランを変更します。"
+    "detail": "アップグレードページを開いてプランを変更します。例：/upgrade"
   },
   {
     "command": "/usage",
     "category": "アカウント・情報",
     "description": "セッションコストと使用状況を表示する",
-    "detail": "コスト・使用制限・アクティビティ統計を表示します。エイリアス: /cost、/stats"
+    "detail": "コスト・使用制限・アクティビティ統計を表示します。例：/usage"
   },
   {
     "command": "/usage-credits",
     "category": "アカウント・情報",
     "description": "制限到達後の作業継続のためのcreditsを設定する",
-    "detail": "制限に達したときに作業を続行するためのusage creditsを構成します。"
+    "detail": "制限に達したときに作業を続行するためのusage creditsを構成します。例：/usage-credits"
   }
 ]
