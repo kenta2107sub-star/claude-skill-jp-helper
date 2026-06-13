@@ -45,7 +45,7 @@
     "command": "/fork",
     "category": "会話管理",
     "description": "この時点で会話のブランチを作成する",
-    "detail": "/branch のエイリアス。会話を分岐させます。"
+    "detail": "/branch のエイリアス。会話を分岐させます。例：/fork feature-auth"
   },
   {
     "command": "/goal",
@@ -87,7 +87,7 @@
     "command": "/rewind",
     "category": "会話管理",
     "description": "会話・コードを前の時点に巻き戻す",
-    "detail": "チェックポイントに巻き戻すか要約します。エイリアス: /checkpoint、/undo"
+    "detail": "チェックポイントに巻き戻すか要約します。例：/rewind 3"
   },
   {
     "command": "/share",
@@ -159,7 +159,7 @@
     "command": "/theme",
     "category": "カスタマイズ",
     "description": "カラーテーマを変更する",
-    "detail": "auto、ライト・ダーク、色覚異常対応、カスタムテーマを選択できます。"
+    "detail": "auto、ライト・ダーク、色覚異常対応から選択。例：/theme dark"
   },
   {
     "command": "/tui",
@@ -225,7 +225,7 @@
     "command": "/security-review",
     "category": "コード品質",
     "description": "変更をセキュリティ脆弱性について分析する",
-    "detail": "git diffをレビューしインジェクション・認証・データ露出リスクを特定します。"
+    "detail": "git diffをレビューし脆弱性を特定します。例：/security-review src/auth.ts"
   },
   {
     "command": "/simplify",
@@ -357,13 +357,13 @@
     "command": "/mcp",
     "category": "設定・管理",
     "description": "MCPサーバー接続を管理する",
-    "detail": "MCPサーバー接続とOAuth認証を管理します。"
+    "detail": "MCPサーバー接続とOAuth認証を管理します。例：/mcp add"
   },
   {
     "command": "/memory",
     "category": "設定・管理",
     "description": "CLAUDE.mdメモリファイルを編集する",
-    "detail": "CLAUDE.mdメモリファイルの編集と自動メモリの管理ができます。"
+    "detail": "CLAUDE.mdメモリファイルの編集と管理ができます。例：/memory edit"
   },
   {
     "command": "/permissions",
@@ -375,7 +375,7 @@
     "command": "/plugin",
     "category": "設定・管理",
     "description": "Claude Codeプラグインを管理する",
-    "detail": "プラグインのインストール・確認・削除ができます。"
+    "detail": "プラグインのインストール・確認・削除ができます。例：/plugin install context7"
   },
   {
     "command": "/reload-plugins",
