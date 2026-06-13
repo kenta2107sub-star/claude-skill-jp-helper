@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude JP Helper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="tooltip" class="tooltip hidden">
+    <div class="tooltip-command" id="tt-command"></div>
+    <div class="tooltip-description" id="tt-description"></div>
+    <div class="tooltip-detail" id="tt-detail"></div>
+  </div>
+  <div id="list"></div>
+
+  <script>
+    const LIST_HEIGHT = 300;
+    const TOOLTIP_HEIGHT = 150;
+    const POPUP_WIDTH = 400;
+
+    let tooltipVisible = false;
+    let hideTimer = null;
+
+    window.api?.onCommands((data) => {
+      hideTooltipImmediate();
+      const list = document.getElementById('list');
+      list.innerHTML = '';
+
+      if (data.grouped) {
+        data.groups.forEach(group => {
+          const header = document.createElement('div');
+          header.className = 'category-header';
+          header.textContent = group.category;
+          list.appendChild(header);
+          group.commands.forEach(cmd => list.appendChild(createItem(cmd)));
+        });
+      } else {
+        data.commands.forEach(cmd => list.appendChild(createItem(cmd)));
+      }
+    });
+
+    function createItem(cmd) {
+      const item = document.createElement('div');
+      item.className = 'item';
+      item.innerHTML = `
+        <span class="command">${cmd.command}</span>
+        <span class="description">${cmd.description}</span>
+      `;
+      item.addEventListener('mouseenter', () => {
+        clearTimeout(hideTimer);
+        showTooltip(cmd);
+      });
+      item.addEventListener('mouseleave', () => {
+        hideTimer = setTimeout(hideTooltip, 80);
+      });
+      return item;
+    }
+
+    function showTooltip(cmd) {
+      document.getElementById('tt-command').textContent = cmd.command;
+      document.getElementById('tt-description').textContent = cmd.description;
+
+      const detail = cmd.detail || '';
+      const parts = detail.split('例：');
+      const descText = parts[0].trim();
+      const usageText = parts[1] ? parts[1].trim() : '';
+
+      const detailEl = document.getElementById('tt-detail');
+      if (usageText) {
+        detailEl.innerHTML = `<span class="tt-desc-text">${descText}</span><span class="tt-usage-label">使用例</span><span class="tt-usage-text">${usageText}</span>`;
+      } else {
+        detailEl.innerHTML = `<span class="tt-desc-text">${descText}</span>`;
+      }
+
+      const tooltip = document.getElementById('tooltip');
+      tooltip.classList.remove('hidden');
+      tooltipVisible = true;
+    }
+
+    function hideTooltip() {
+      if (!tooltipVisible) return;
+      document.getElementById('tooltip').classList.add('hidden');
+      tooltipVisible = false;
+    }
+
+    function hideTooltipImmediate() {
+      clearTimeout(hideTimer);
+      hideTooltip();
+    }
+  </script>
+</body>
+</html>

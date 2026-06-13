@@ -1,0 +1,470 @@
+[
+  {
+    "command": "/btw",
+    "category": "会話管理",
+    "description": "履歴を汚さず質問する",
+    "detail": "会話履歴を膨らませずに簡単な質問や補足をします。例：/btw このファイルは何の役割？"
+  },
+  {
+    "command": "/checkpoint",
+    "category": "会話管理",
+    "description": "チェックポイントを作成する",
+    "detail": "現在の状態にチェックポイントを作成します。後で/rewindで戻れます。例：/checkpoint（後で/rewindで戻れる）"
+  },
+  {
+    "command": "/clear",
+    "category": "会話管理",
+    "description": "会話をリセットする",
+    "detail": "現在の会話コンテキストを空にリセットします。例：/clear"
+  },
+  {
+    "command": "/compact",
+    "category": "会話管理",
+    "description": "会話を圧縮する",
+    "detail": "長くなった会話履歴を要約してコンテキストウィンドウを節約します。例：/compact 重要な決定だけ残して"
+  },
+  {
+    "command": "/context",
+    "category": "会話管理",
+    "description": "コンテキスト使用量を確認する",
+    "detail": "コンテキストウィンドウの使用状況を表示します。/context all で詳細表示。例：/context または /context all"
+  },
+  {
+    "command": "/continue",
+    "category": "会話管理",
+    "description": "直前のセッションを継続する",
+    "detail": "最後のセッションを継続します。例：/continue"
+  },
+  {
+    "command": "/copy",
+    "category": "会話管理",
+    "description": "出力をコピーする",
+    "detail": "直前の出力をクリップボードにコピーします。例：/copy 2 で2番目の出力をコピー"
+  },
+  {
+    "command": "/export",
+    "category": "会話管理",
+    "description": "会話をエクスポートする",
+    "detail": "現在の会話をファイルに書き出します。例：/export session.md"
+  },
+  {
+    "command": "/fork",
+    "category": "会話管理",
+    "description": "セッションを分岐させる",
+    "detail": "現在のセッションを別方向に分岐させます。例：/fork テストを先に書く方針で"
+  },
+  {
+    "command": "/goal",
+    "category": "会話管理",
+    "description": "ゴールを設定する",
+    "detail": "セッションのゴール条件を設定します。例：/goal テストが全て通ること"
+  },
+  {
+    "command": "/new",
+    "category": "会話管理",
+    "description": "新しいセッションを開始する",
+    "detail": "新しいセッションを開始します。例：/new"
+  },
+  {
+    "command": "/recap",
+    "category": "会話管理",
+    "description": "作業内容を振り返る",
+    "detail": "現在のセッションで行った作業内容を要約します。例：/recap"
+  },
+  {
+    "command": "/rename",
+    "category": "会話管理",
+    "description": "セッション名を変更する",
+    "detail": "現在のセッションの表示名を変更します。例：/rename feature-auth"
+  },
+  {
+    "command": "/reset",
+    "category": "会話管理",
+    "description": "セッションをリセットする",
+    "detail": "現在のセッションをリセットします。例：/reset"
+  },
+  {
+    "command": "/resume",
+    "category": "会話管理",
+    "description": "過去のセッションを再開する",
+    "detail": "過去のセッションを選択して会話を再開します。例：/resume または /resume my-session"
+  },
+  {
+    "command": "/rewind",
+    "category": "会話管理",
+    "description": "以前の状態に戻る",
+    "detail": "/checkpointで作成したポイントまで状態を戻します。例：/rewind（直前のチェックポイントに戻る）"
+  },
+  {
+    "command": "/share",
+    "category": "会話管理",
+    "description": "セッションを共有する",
+    "detail": "現在のセッションを共有可能なリンクとして出力します。例：/share"
+  },
+  {
+    "command": "/undo",
+    "category": "会話管理",
+    "description": "直前の変更を元に戻す",
+    "detail": "直前のファイル変更を元に戻します。例：/undo"
+  },
+  {
+    "command": "/advisor",
+    "category": "モデル・設定",
+    "description": "アドバイザーモデルを設定する",
+    "detail": "タスクの重要な場面で別モデルに助言を求める機能をオン・オフします。例：/advisor opus"
+  },
+  {
+    "command": "/config",
+    "category": "モデル・設定",
+    "description": "設定を開く",
+    "detail": "Claude Codeの設定画面を開きます。例：/config"
+  },
+  {
+    "command": "/effort",
+    "category": "モデル・設定",
+    "description": "思考量を調整する",
+    "detail": "推論レベルを設定します。例：/effort high（low/medium/high/xhigh/max）"
+  },
+  {
+    "command": "/fast",
+    "category": "モデル・設定",
+    "description": "高速モードを切り替える",
+    "detail": "Claude Opus + 高速出力モードのオン・オフを切り替えます。例：/fast on または /fast off"
+  },
+  {
+    "command": "/keybindings",
+    "category": "モデル・設定",
+    "description": "キーバインドを設定する",
+    "detail": "Claude Codeのキーボードショートカットをカスタマイズします。例：/keybindings"
+  },
+  {
+    "command": "/model",
+    "category": "モデル・設定",
+    "description": "モデルを切り替える",
+    "detail": "使用するClaudeモデルを変更します。例：/model claude-opus-4-8"
+  },
+  {
+    "command": "/settings",
+    "category": "モデル・設定",
+    "description": "設定を管理する",
+    "detail": "Claude Codeの各種設定を確認・変更します。例：/settings"
+  },
+  {
+    "command": "/theme",
+    "category": "モデル・設定",
+    "description": "テーマを変更する",
+    "detail": "Claude Codeの表示テーマを変更します。例：/theme dark または /theme light"
+  },
+  {
+    "command": "/tui",
+    "category": "モデル・設定",
+    "description": "TUI表示モードを切り替える",
+    "detail": "ターミナルUIの表示モードを切り替えます。例：/tui fullscreen"
+  },
+  {
+    "command": "/vim",
+    "category": "モデル・設定",
+    "description": "Vimモードを切り替える",
+    "detail": "テキスト入力のVimキーバインドをオン・オフします。例：/vim（トグル）"
+  },
+  {
+    "command": "/voice",
+    "category": "モデル・設定",
+    "description": "音声入力を設定する",
+    "detail": "音声入力モードを設定します。例：/voice tap（hold/tap/off）"
+  },
+  {
+    "command": "/code-review",
+    "category": "レビュー・調査",
+    "description": "コードレビューを実行する",
+    "detail": "変更内容をレビューします。--fixで自動修正、ultraで超詳細レビューも可能。例：/code-review ultra"
+  },
+  {
+    "command": "/debug",
+    "category": "レビュー・調査",
+    "description": "デバッグモードで調査する",
+    "detail": "問題の調査・デバッグを開始します。例：/debug ログイン後にクラッシュする"
+  },
+  {
+    "command": "/deep-research",
+    "category": "レビュー・調査",
+    "description": "深掘り調査を行う",
+    "detail": "指定した質問について深く調査・リサーチします。例：/deep-research Reactのレンダリング最適化"
+  },
+  {
+    "command": "/diff",
+    "category": "レビュー・調査",
+    "description": "差分を表示する",
+    "detail": "現在の変更内容のdiffを表示します。例：/diff"
+  },
+  {
+    "command": "/doctor",
+    "category": "レビュー・調査",
+    "description": "環境診断を実行する",
+    "detail": "Claude Codeの環境設定や依存関係の問題を診断します。例：/doctor"
+  },
+  {
+    "command": "/review",
+    "category": "レビュー・調査",
+    "description": "PRをレビューする",
+    "detail": "現在の変更内容またはプルリクエストをレビューします。例：/review 123"
+  },
+  {
+    "command": "/run",
+    "category": "レビュー・調査",
+    "description": "アプリを起動して確認する",
+    "detail": "プロジェクトのアプリを起動して変更を実際に確認します。例：/run"
+  },
+  {
+    "command": "/security-review",
+    "category": "レビュー・調査",
+    "description": "セキュリティレビューを実行する",
+    "detail": "コードのセキュリティ上の問題を検査します。例：/security-review"
+  },
+  {
+    "command": "/simplify",
+    "category": "レビュー・調査",
+    "description": "コードを簡素化する",
+    "detail": "変更したコードのリファクタリングや簡素化を行います。例：/simplify または /simplify src/auth.ts"
+  },
+  {
+    "command": "/ultrareview",
+    "category": "レビュー・調査",
+    "description": "超詳細コードレビューを実行する",
+    "detail": "マルチエージェントによる超詳細なコードレビューを実行します。例：/ultrareview または /ultrareview 123"
+  },
+  {
+    "command": "/verify",
+    "category": "レビュー・調査",
+    "description": "変更を検証する",
+    "detail": "アプリを実際に起動して変更が正しく動作するか確認します。例：/verify"
+  },
+  {
+    "command": "/agents",
+    "category": "エージェント・並列",
+    "description": "サブエージェントを管理する",
+    "detail": "利用可能なサブエージェントの一覧表示・設定を行います。例：/agents"
+  },
+  {
+    "command": "/background",
+    "category": "エージェント・並列",
+    "description": "バックグラウンドで実行する",
+    "detail": "セッションをバックグラウンドエージェントとして切り離し、ターミナルを解放します。例：/background テストを全部実行しておいて"
+  },
+  {
+    "command": "/batch",
+    "category": "エージェント・並列",
+    "description": "並列バッチ処理を実行する",
+    "detail": "大きな変更を独立した単位に分解し、それぞれのWorktreeで並列実行します。例：/batch src/をTypeScriptに移行する"
+  },
+  {
+    "command": "/loop",
+    "category": "エージェント・並列",
+    "description": "ループ実行する",
+    "detail": "指定した間隔でコマンドを繰り返し実行します。例：/loop 5m デプロイが完了したか確認する"
+  },
+  {
+    "command": "/plan",
+    "category": "エージェント・並列",
+    "description": "プランモードに入る",
+    "detail": "大きな変更の前にプランを立てるモードに切り替えます。例：/plan 認証機能を追加する"
+  },
+  {
+    "command": "/routines",
+    "category": "エージェント・並列",
+    "description": "ルーティンを管理する",
+    "detail": "定期実行するスケジュールタスクを管理します。例：/routines"
+  },
+  {
+    "command": "/schedule",
+    "category": "エージェント・並列",
+    "description": "タスクをスケジュールする",
+    "detail": "指定した時刻にClaude Codeのタスクを自動実行するよう予約します。例：/schedule 毎朝9時にテストを実行する"
+  },
+  {
+    "command": "/stop",
+    "category": "エージェント・並列",
+    "description": "実行を停止する",
+    "detail": "現在実行中のタスクを停止します。例：/stop"
+  },
+  {
+    "command": "/tasks",
+    "category": "エージェント・並列",
+    "description": "バックグラウンドタスクを確認する",
+    "detail": "バックグラウンド実行中のタスク一覧を表示します。例：/tasks"
+  },
+  {
+    "command": "/ultraplan",
+    "category": "エージェント・並列",
+    "description": "超詳細プランを作成する",
+    "detail": "マルチエージェントを使用して超詳細な実装プランを作成します。例：/ultraplan 認証機能をゼロから実装する"
+  },
+  {
+    "command": "/workflows",
+    "category": "エージェント・並列",
+    "description": "ワークフローを管理する",
+    "detail": "定義済みのワークフローを表示・実行します。例：/workflows"
+  },
+  {
+    "command": "/add-dir",
+    "category": "プロジェクト管理",
+    "description": "作業ディレクトリを追加する",
+    "detail": "現在のセッションにファイルアクセス用の作業ディレクトリを追加します。例：/add-dir ../lib"
+  },
+  {
+    "command": "/allowed-tools",
+    "category": "プロジェクト管理",
+    "description": "許可ツールを管理する",
+    "detail": "Claudeが使用できるツールの許可リストを確認・変更します。例：/allowed-tools"
+  },
+  {
+    "command": "/branch",
+    "category": "プロジェクト管理",
+    "description": "新しいブランチを作成する",
+    "detail": "現在のセッションを新しいgitブランチに切り替えます。例：/branch feature/new-ui"
+  },
+  {
+    "command": "/cd",
+    "category": "プロジェクト管理",
+    "description": "ディレクトリを移動する",
+    "detail": "作業ディレクトリを変更します。例：/cd ../frontend"
+  },
+  {
+    "command": "/fewer-permission-prompts",
+    "category": "プロジェクト管理",
+    "description": "権限プロンプトを減らす",
+    "detail": "よく使うコマンドを許可リストに追加して権限確認の頻度を下げます。例：/fewer-permission-prompts"
+  },
+  {
+    "command": "/hooks",
+    "category": "プロジェクト管理",
+    "description": "フックを管理する",
+    "detail": "ツール呼び出し前後に実行されるフックの設定を管理します。例：/hooks"
+  },
+  {
+    "command": "/ide",
+    "category": "プロジェクト管理",
+    "description": "IDEとの連携を設定する",
+    "detail": "VS CodeやJetBrainsなどのIDE連携を設定します。例：/ide"
+  },
+  {
+    "command": "/init",
+    "category": "プロジェクト管理",
+    "description": "プロジェクトを初期化する",
+    "detail": "現在のディレクトリにCLAUDE.mdを生成し、プロジェクトを初期化します。例：/init"
+  },
+  {
+    "command": "/mcp",
+    "category": "プロジェクト管理",
+    "description": "MCPサーバーを管理する",
+    "detail": "接続中のModel Context Protocol（MCP）サーバーの一覧表示・管理を行います。例：/mcp または /mcp reconnect my-server"
+  },
+  {
+    "command": "/memory",
+    "category": "プロジェクト管理",
+    "description": "メモリを編集する",
+    "detail": "Claude Codeが記憶している情報（CLAUDE.mdなど）を確認・編集します。例：/memory"
+  },
+  {
+    "command": "/permissions",
+    "category": "プロジェクト管理",
+    "description": "権限を管理する",
+    "detail": "Claude Codeに付与されているツールの実行権限を確認・変更します。例：/permissions"
+  },
+  {
+    "command": "/plugin",
+    "category": "プロジェクト管理",
+    "description": "プラグインを管理する",
+    "detail": "Claude Codeのプラグインを管理します。例：/plugin list または /plugin install my-plugin"
+  },
+  {
+    "command": "/pr-comments",
+    "category": "プロジェクト管理",
+    "description": "PRのコメントを確認する",
+    "detail": "プルリクエストのレビューコメントを取得して対応します。例：/pr-comments 123"
+  },
+  {
+    "command": "/autofix-pr",
+    "category": "プロジェクト管理",
+    "description": "PRの問題を自動修正する",
+    "detail": "プルリクエストのlintエラーや型エラーを自動で修正します。例：/autofix-pr または /autofix-pr only fix lint and type errors"
+  },
+  {
+    "command": "/reload-skills",
+    "category": "プロジェクト管理",
+    "description": "スキルを再読み込みする",
+    "detail": "インストール済みのスキルを再読み込みします。例：/reload-skills"
+  },
+  {
+    "command": "/skills",
+    "category": "プロジェクト管理",
+    "description": "スキルを管理する",
+    "detail": "インストール済みのスキル（カスタムコマンド）の一覧を表示・管理します。例：/skills"
+  },
+  {
+    "command": "/terminal-setup",
+    "category": "プロジェクト管理",
+    "description": "ターミナルをセットアップする",
+    "detail": "Claude Code向けにターミナルの設定を最適化します。例：/terminal-setup"
+  },
+  {
+    "command": "/bug",
+    "category": "ヘルプ・情報",
+    "description": "バグを報告する",
+    "detail": "Claude Codeのバグや問題をAnthropicに報告します。例：/bug ツールが応答しなくなった"
+  },
+  {
+    "command": "/cost",
+    "category": "ヘルプ・情報",
+    "description": "コストを表示する",
+    "detail": "現在のセッションで使用したトークン数とAPIコストを表示します。例：/cost"
+  },
+  {
+    "command": "/feedback",
+    "category": "ヘルプ・情報",
+    "description": "フィードバックを送る",
+    "detail": "Claude Codeへのフィードバックや改善提案を送ります。例：/feedback この機能を改善してほしい"
+  },
+  {
+    "command": "/help",
+    "category": "ヘルプ・情報",
+    "description": "ヘルプを表示する",
+    "detail": "利用可能なスラッシュコマンドの一覧と説明を表示します。例：/help"
+  },
+  {
+    "command": "/status",
+    "category": "ヘルプ・情報",
+    "description": "ステータスを表示する",
+    "detail": "現在のセッション情報・モデル・コンテキスト使用量などを表示します。例：/status"
+  },
+  {
+    "command": "/usage",
+    "category": "ヘルプ・情報",
+    "description": "使用量を確認する",
+    "detail": "APIの使用量・クレジット残高を表示します。例：/usage"
+  },
+  {
+    "command": "/login",
+    "category": "アカウント",
+    "description": "ログインする",
+    "detail": "AnthropicアカウントまたはAPIキーでログインします。例：/login"
+  },
+  {
+    "command": "/logout",
+    "category": "アカウント",
+    "description": "ログアウトする",
+    "detail": "現在のセッションからログアウトします。例：/logout"
+  },
+  {
+    "command": "/upgrade",
+    "category": "アカウント",
+    "description": "Claude Codeをアップデートする",
+    "detail": "Claude Codeを最新バージョンにアップデートします。例：/upgrade"
+  },
+  {
+    "command": "/exit",
+    "category": "アカウント",
+    "description": "終了する",
+    "detail": "Claude Codeを終了します。例：/exit"
+  }
+]

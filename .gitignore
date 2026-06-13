@@ -1,0 +1,10 @@
+node_modules/
+dist/
+CLAUDE.md
+progress.md
+.env
+*.plist
+.DS_Store
+*.log
+
+.claude/
