@@ -3,451 +3,457 @@
     "command": "/btw",
     "category": "会話管理",
     "description": "履歴を汚さずサイドで質問する",
-    "detail": "会話履歴に追加せず、素早く脇道の質問をします。例：/btw このライブラリのライセンスは何ですか？"
+    "detail": "会話履歴に追加せず素早く脇道の質問をします。例：/btw このライブラリのライセンスは何？"
   },
   {
     "command": "/checkpoint",
     "category": "会話管理",
     "description": "会話・コードを前の時点に巻き戻す",
-    "detail": "/rewind のエイリアス。チェックポイントに巻き戻すか、選択したメッセージから要約します。"
+    "detail": "/rewind のエイリアス。チェックポイントに巻き戻します。"
   },
   {
     "command": "/clear",
     "category": "会話管理",
     "description": "新しい会話を空のコンテキストで開始する",
-    "detail": "新しい会話を開始します。前の会話は /resume で利用可能なままです。エイリアス: /reset、/new"
+    "detail": "新しい会話を開始します。前の会話は /resume で再開できます。例：/clear 作業メモ"
   },
   {
     "command": "/compact",
     "category": "会話管理",
     "description": "会話を要約してコンテキストを解放する",
-    "detail": "会話をここまで要約してコンテキストウィンドウを解放します。オプションで要約のフォーカス指示を渡せます。例：/compact コード変更に集中して"
+    "detail": "会話をここまで要約しコンテキストを解放します。例：/compact コード変更に集中して"
   },
   {
     "command": "/context",
     "category": "会話管理",
-    "description": "現在のコンテキスト使用状況を可視化する",
-    "detail": "現在のコンテキスト使用状況をカラーグリッドで表示します。コンテキストが多いツール、メモリ肥大化、最適化提案を確認できます。/context all で詳細表示。"
+    "description": "コンテキスト使用状況を可視化する",
+    "detail": "コンテキスト使用状況をカラーグリッドで表示します。例：/context all"
   },
   {
     "command": "/copy",
     "category": "会話管理",
-    "description": "最後のアシスタント応答をクリップボードにコピーする",
-    "detail": "最後の応答をクリップボードにコピーします。数字Nを渡すとN番目に新しい応答をコピー。コードブロックがある場合は個別ブロックか全体かを選択できます。例：/copy 2"
+    "description": "最後の応答をクリップボードにコピーする",
+    "detail": "最後の応答をコピーします。数字でN番目を指定可能。例：/copy 2"
   },
   {
     "command": "/export",
     "category": "会話管理",
     "description": "現在の会話をプレーンテキストでエクスポートする",
-    "detail": "現在の会話をプレーンテキストとしてエクスポートします。ファイル名を指定するとそのファイルに書き込み、指定しない場合はクリップボードかファイルに保存するダイアログを開きます。"
+    "detail": "会話をテキストでエクスポートします。例：/export meeting-notes.txt"
   },
   {
     "command": "/fork",
     "category": "会話管理",
     "description": "この時点で会話のブランチを作成する",
-    "detail": "/branch のエイリアス。この時点で現在の会話のブランチを作成し、ブランチに切り替えます。元の会話は /resume で保持されます。"
+    "detail": "/branch のエイリアス。会話を分岐させます。"
   },
   {
     "command": "/goal",
     "category": "会話管理",
     "description": "目標を設定し、達成まで継続して作業させる",
-    "detail": "目標を設定します。Claudeは条件が満たされるまでターン間で作業を続けます。引数なしで現在の目標を表示。例：/goal テストが全てパスするまで修正する"
+    "detail": "条件が満たされるまで作業を続けます。例：/goal テストが全てパスするまで修正する"
   },
   {
     "command": "/new",
     "category": "会話管理",
     "description": "新しい会話を開始する",
-    "detail": "/clear のエイリアス。空のコンテキストで新しい会話を開始します。"
+    "detail": "/clear のエイリアス。新しい会話を開始します。"
   },
   {
     "command": "/recap",
     "category": "会話管理",
     "description": "現在のセッションの要約を生成する",
-    "detail": "現在のセッションの1行の要約をオンデマンドで生成します。しばらく離れた後に表示される自動要約と同じものです。"
+    "detail": "セッションの1行要約をオンデマンドで生成します。"
   },
   {
     "command": "/rename",
     "category": "会話管理",
     "description": "現在のセッションの名前を変更する",
-    "detail": "現在のセッションの名前を変更してプロンプトバーに表示します。名前を指定しない場合、会話履歴から自動生成されます。"
+    "detail": "セッション名を変更してプロンプトバーに表示します。例：/rename auth-bugfix"
   },
   {
     "command": "/reset",
     "category": "会話管理",
     "description": "新しい会話を開始する",
-    "detail": "/clear のエイリアス。空のコンテキストで新しい会話を開始します。"
+    "detail": "/clear のエイリアス。新しい会話を開始します。"
   },
   {
     "command": "/resume",
     "category": "会話管理",
     "description": "以前の会話を再開する",
-    "detail": "IDまたは名前で会話を再開するか、セッションピッカーを開きます。バックグラウンドセッションはピッカーに「bg」とマークされて表示されます。エイリアス: /continue"
+    "detail": "IDまたは名前で会話を再開します。例：/resume abc123"
   },
   {
     "command": "/rewind",
     "category": "会話管理",
     "description": "会話・コードを前の時点に巻き戻す",
-    "detail": "会話またはコードをチェックポイントに巻き戻すか、選択したメッセージから要約します。エイリアス: /checkpoint、/undo"
+    "detail": "チェックポイントに巻き戻すか要約します。エイリアス: /checkpoint、/undo"
   },
   {
     "command": "/share",
     "category": "会話管理",
     "description": "フィードバックを送信・会話を共有する",
-    "detail": "/feedback のエイリアス。フィードバックを送信し、バグを報告するか、会話を共有します。"
+    "detail": "/feedback のエイリアス。バグ報告や会話共有ができます。"
   },
   {
     "command": "/undo",
     "category": "会話管理",
     "description": "会話・コードを前の時点に巻き戻す",
-    "detail": "/rewind のエイリアス。チェックポイントに巻き戻すか、選択したメッセージから要約します。"
+    "detail": "/rewind のエイリアス。チェックポイントに巻き戻します。"
   },
   {
     "command": "/color",
     "category": "カスタマイズ",
     "description": "プロンプトバーの色を設定する",
-    "detail": "現在のセッションのプロンプトバーの色を設定します。利用可能な色: red、blue、green、yellow、purple、orange、pink、cyan。引数なしでランダムな色を選択。例：/color blue"
+    "detail": "利用可能: red、blue、green、yellow、purple、orange、pink、cyan。例：/color blue"
   },
   {
     "command": "/config",
     "category": "カスタマイズ",
     "description": "設定インターフェースを開く",
-    "detail": "テーマ、モデル、出力スタイル、およびその他の設定を調整するインターフェースを開きます。エイリアス: /settings"
+    "detail": "テーマ、モデル、出力スタイルなどを調整します。エイリアス: /settings"
   },
   {
     "command": "/effort",
     "category": "カスタマイズ",
     "description": "モデルの推論努力レベルを設定する",
-    "detail": "モデルの努力レベルを設定します。low、medium、high、xhigh、max、ultracode を受け入れます。引数なしでインタラクティブスライダーを開きます。例：/effort high"
+    "detail": "low、medium、high、xhigh、max、ultracode から選択。例：/effort high"
   },
   {
     "command": "/fast",
     "category": "カスタマイズ",
     "description": "高速モードのオン/オフを切り替える",
-    "detail": "高速モードを切り替えます。Claude OpusをFast出力で使用します（小さいモデルへのダウングレードではありません）。例：/fast on"
+    "detail": "Claude Opusを高速出力モードで使用します。例：/fast on"
   },
   {
     "command": "/focus",
     "category": "カスタマイズ",
     "description": "フォーカスビューを切り替える",
-    "detail": "フォーカスビューを切り替えます。最後のプロンプト、編集diffstats、最終応答のみを表示します。フルスクリーンレンダリングでのみ利用可能です。"
+    "detail": "最後のプロンプトと最終応答のみ表示します。フルスクリーン時のみ利用可能。"
   },
   {
     "command": "/keybindings",
     "category": "カスタマイズ",
     "description": "キーバインディング設定ファイルを開く",
-    "detail": "キーバインディング設定ファイルを開くか作成します。Shift+Enterなどのショートカットをカスタマイズできます。"
+    "detail": "キーバインディング設定ファイルを開くか作成します。"
   },
   {
     "command": "/model",
     "category": "カスタマイズ",
     "description": "AIモデルを切り替える",
-    "detail": "AIモデルを切り替えて新しいセッションのデフォルトとして保存します。引数なしでピッカーを開きます。「s」を押して現在のセッションのみ切り替え。例：/model claude-opus-4-8"
+    "detail": "引数なしでピッカーを開きます。例：/model claude-sonnet-4-6"
   },
   {
     "command": "/scroll-speed",
     "category": "カスタマイズ",
     "description": "マウスホイールのスクロール速度を調整する",
-    "detail": "マウスホイールスクロール速度をインタラクティブに調整します。フルスクリーンレンダリングでのみ利用可能です。"
+    "detail": "スクロール速度をインタラクティブに調整します。フルスクリーン時のみ利用可能。"
   },
   {
     "command": "/settings",
     "category": "カスタマイズ",
     "description": "設定インターフェースを開く",
-    "detail": "/config のエイリアス。テーマ、モデル、出力スタイルなどの設定インターフェースを開きます。"
+    "detail": "/config のエイリアス。各種設定を調整します。"
   },
   {
     "command": "/theme",
     "category": "カスタマイズ",
     "description": "カラーテーマを変更する",
-    "detail": "カラーテーマを変更します。auto（ターミナルのダーク/ライトに従う）、ライト・ダークバリアント、色覚異常対応テーマ、ANSIテーマ、カスタムテーマを含みます。"
+    "detail": "auto、ライト・ダーク、色覚異常対応、カスタムテーマを選択できます。"
   },
   {
     "command": "/tui",
     "category": "カスタマイズ",
     "description": "ターミナルUIレンダラーを設定する",
-    "detail": "ターミナルUIレンダラーを設定し、会話を保持したまま再起動します。fullscreenでちらつきなしのalt-screenレンダラーを有効化。例：/tui fullscreen"
+    "detail": "会話を保持したまま再起動します。例：/tui fullscreen"
   },
   {
     "command": "/voice",
     "category": "カスタマイズ",
     "description": "音声ディクテーションを切り替える",
-    "detail": "音声ディクテーションを切り替えるか、特定のモードで有効にします。hold（押している間）またはtap（タップで切り替え）モードを選択できます。Claude.aiアカウントが必要です。例：/voice tap"
+    "detail": "hold（押している間）またはtapモードを選択。例：/voice tap"
   },
   {
     "command": "/code-review",
     "category": "コード品質",
     "description": "現在のdiffをバグと品質問題でレビューする",
-    "detail": "現在のdiffを正確性バグについてレビューし、再利用・簡潔化・効率化のクリーンアップもチェックします。--fixで修正を適用、--commentでGitHub PRにコメント投稿、ultraでクラウドレビューを実行。例：/code-review high --fix"
+    "detail": "--fixで修正適用、ultraでクラウドレビュー。例：/code-review high --fix"
   },
   {
     "command": "/debug",
     "category": "コード品質",
-    "description": "デバッグログを有効にして問題をトラブルシューティングする",
-    "detail": "現在のセッションのデバッグログを有効にし、セッションデバッグログを読むことで問題をトラブルシューティングします。オプションで問題を説明して分析にフォーカスを当てます。例：/debug MCPサーバーへの接続エラー"
+    "description": "デバッグログを有効にして問題を診断する",
+    "detail": "セッションのデバッグログを有効にします。例：/debug MCPサーバーへの接続エラー"
   },
   {
     "command": "/deep-research",
     "category": "コード品質",
     "description": "ウェブ検索で詳細なリサーチレポートを生成する",
-    "detail": "質問に関するウェブ検索をファンアウトし、ソースをフェッチして相互検証し、引用されたレポートを合成します。例：/deep-research Electronのパフォーマンス最適化手法"
+    "detail": "ウェブ検索をファンアウトし引用付きレポートを生成します。例：/deep-research Electronのパフォーマンス最適化"
   },
   {
     "command": "/diff",
     "category": "コード品質",
     "description": "インタラクティブなdiffビューアを開く",
-    "detail": "コミットされていない変更と各ターンのdiffを表示するインタラクティブdiffビューアを開きます。左右矢印でgit diffと個別ターンを切り替え、上下矢印でファイルをブラウズ。"
+    "detail": "コミットされていない変更と各ターンのdiffを表示します。"
   },
   {
     "command": "/doctor",
     "category": "コード品質",
     "description": "Claude Codeのインストールと設定を診断する",
-    "detail": "Claude Codeのインストールと設定を診断および検証します。結果はステータスアイコン付きで表示されます。「f」を押してClaudeに報告された問題を修正させることができます。"
+    "detail": "インストールと設定を診断します。「f」で問題を自動修正。"
   },
   {
     "command": "/review",
     "category": "コード品質",
     "description": "プルリクエストをローカルでレビューする",
-    "detail": "現在のセッションでプルリクエストをローカルでレビューします。より深いクラウドベースのレビューについては /code-review ultra を使用してください。"
+    "detail": "PRをローカルでレビューします。例：/review 42"
   },
   {
     "command": "/run",
     "category": "コード品質",
     "description": "プロジェクトのアプリを起動して変更を確認する",
-    "detail": "プロジェクトのアプリを起動して実行し、テストだけでなく実行中のアプリで変更が機能しているのを確認します。Claude Code v2.1.145以降が必要です。"
+    "detail": "アプリを実際に起動して変更が動作しているか確認します。"
   },
   {
     "command": "/run-skill-generator",
     "category": "コード品質",
     "description": "/runと/verify用のプロジェクトスキルを作成する",
-    "detail": "クリーンな環境からプロジェクトのアプリをビルド・起動・実行する方法を /run と /verify に教えるためのプロジェクトごとのスキルを作成します。Claude Code v2.1.145以降が必要です。"
+    "detail": "/run と /verify にアプリの起動方法を教えるスキルを作成します。"
   },
   {
     "command": "/security-review",
     "category": "コード品質",
     "description": "変更をセキュリティ脆弱性について分析する",
-    "detail": "現在のブランチの保留中の変更をセキュリティ脆弱性について分析します。git diffをレビューし、インジェクション、認証の問題、データ露出などのリスクを特定します。"
+    "detail": "git diffをレビューしインジェクション・認証・データ露出リスクを特定します。"
   },
   {
     "command": "/simplify",
     "category": "コード品質",
     "description": "変更されたコードをクリーンアップする",
-    "detail": "変更されたコードをクリーンアップの機会についてレビューし、修正を適用します。4つのレビューエージェントが並列で実行され、既存ヘルパーの再利用・簡潔化・効率化をカバーします。バグ探しには /code-review を使用。"
+    "detail": "再利用・簡潔化・効率化を4エージェントが並列レビューして修正適用。例：/simplify src/auth.ts"
   },
   {
     "command": "/ultrareview",
     "category": "コード品質",
     "description": "クラウドで深い複数エージェントコードレビューを実行する",
-    "detail": "クラウドサンドボックスで深い複数エージェントコードレビューを実行します。推奨は /code-review ultra です。ProとMaxに3つの無料実行が含まれます。"
+    "detail": "クラウドで深いコードレビューを実行します。例：/ultrareview 42"
   },
   {
     "command": "/verify",
     "category": "コード品質",
     "description": "実行中のアプリでコード変更を確認する",
-    "detail": "プロジェクトのアプリをビルドして実行し、結果を観察することでコード変更が期待通りに機能することを確認します。テストや型チェックに依存するのではなく、実際の動作を確認します。"
+    "detail": "アプリをビルドして実行し、テストではなく実際の動作を確認します。"
   },
   {
     "command": "/agents",
     "category": "エージェント・並列",
     "description": "サブエージェントマネージャーを開く",
-    "detail": "Claudeが副次的なタスクを委譲できるサブエージェントのマネージャーを開きます。バックグラウンドで実行中のエージェントを監視・管理できます。"
+    "detail": "サブエージェントのマネージャーを開き、バックグラウンドエージェントを管理します。"
   },
   {
     "command": "/background",
     "category": "エージェント・並列",
-    "description": "現在のセッションをバックグラウンドエージェントとしてデタッチする",
-    "detail": "現在のセッションをデタッチしてバックグラウンドエージェントとして実行し、ターミナルを解放します。デタッチ前にプロンプトを渡すこともできます。エイリアス: /bg"
+    "description": "現在のセッションをバックグラウンドで実行する",
+    "detail": "セッションをデタッチしてバックグラウンドで続行します。例：/background 失敗しているテストを修正して"
   },
   {
     "command": "/batch",
     "category": "エージェント・並列",
-    "description": "コードベース全体の大規模な変更を並列で実行する",
-    "detail": "コードベース全体にわたる大規模な変更を並列で調整します。作業を5〜30個の独立したユニットに分解し、各ユニットごとにgit worktreeでサブエージェントを生成します。例：/batch migrate src/ from Solid to React"
+    "description": "コードベース全体の大規模変更を並列で実行する",
+    "detail": "作業を複数ユニットに分解し各worktreeで並列実行。例：/batch migrate src/ from Solid to React"
   },
   {
     "command": "/loop",
     "category": "エージェント・並列",
     "description": "プロンプトを繰り返し実行する",
-    "detail": "セッションが開いている間、プロンプトを繰り返し実行します。間隔を省略するとClaudeが自動でペースを調整します。例：/loop 5m check if the deploy finished。エイリアス: /proactive"
+    "detail": "プロンプトを繰り返し実行します。例：/loop 5m check if the deploy finished"
   },
   {
     "command": "/plan",
     "category": "エージェント・並列",
     "description": "プランモードに入る",
-    "detail": "プロンプトから直接プランモードに入ります。オプションの説明を渡してすぐにそのタスクで開始できます。例：/plan fix the auth bug"
+    "detail": "プランモードに入ります。例：/plan fix the auth bug"
   },
   {
     "command": "/routines",
     "category": "エージェント・並列",
     "description": "スケジュールされたルーティンを管理する",
-    "detail": "/schedule のエイリアス。ルーティンを作成、更新、リスト表示、または実行します。"
+    "detail": "/schedule のエイリアス。ルーティンを管理します。"
   },
   {
     "command": "/schedule",
     "category": "エージェント・並列",
     "description": "スケジュールされたルーティンを作成・管理する",
-    "detail": "ルーティンを作成、更新、リスト表示、または実行します。Claudeがセットアップを会話形式でガイドします。エイリアス: /routines"
+    "detail": "ルーティンを作成・管理します。例：/schedule 毎朝9時にコードレビューする"
   },
   {
     "command": "/stop",
     "category": "エージェント・並列",
     "description": "現在のバックグラウンドセッションを停止する",
-    "detail": "現在のバックグラウンドセッションを停止します。バックグラウンドセッションに接続されている場合のみ利用可能です。トランスクリプトとworktreeは保持されます。"
+    "detail": "バックグラウンドセッションを停止します。トランスクリプトとworktreeは保持。"
   },
   {
     "command": "/tasks",
     "category": "エージェント・並列",
     "description": "バックグラウンドタスクをリスト・管理する",
-    "detail": "バックグラウンドタスクをリストおよび管理します。エイリアス: /bashes"
+    "detail": "バックグラウンドタスクを一覧表示・管理します。エイリアス: /bashes"
   },
   {
     "command": "/ultraplan",
     "category": "エージェント・並列",
     "description": "ultraplanセッションで計画を作成する",
-    "detail": "ultraplanセッションで計画を作成し、ブラウザでレビューし、リモートで実行するかターミナルに送り返します。例：/ultraplan 認証システムをリファクタリングする"
+    "detail": "計画を作成しブラウザでレビュー後、リモートまたはターミナルで実行。例：/ultraplan 認証システムをリファクタリング"
   },
   {
     "command": "/workflows",
     "category": "エージェント・並列",
     "description": "ワークフロー進捗ビューを開く",
-    "detail": "ワークフロー進捗ビューを開いて、実行中および完了したワークフローを監視、一時停止、再開、または保存します。"
+    "detail": "実行中・完了したワークフローを監視・一時停止・再開できます。"
   },
   {
     "command": "/allowed-tools",
     "category": "設定・管理",
     "description": "ツール権限を管理する",
-    "detail": "/permissions のエイリアス。ツール権限のアクセス許可、確認、および拒否ルールを管理するインタラクティブダイアログを開きます。"
+    "detail": "/permissions のエイリアス。ツール権限を管理します。"
   },
   {
     "command": "/autofix-pr",
     "category": "設定・管理",
     "description": "PRのCI失敗やレビューコメントを自動修正する",
-    "detail": "現在のブランチのPRを監視し、CIが失敗するかレビュアーがコメントを残したときに修正をプッシュするセッションを生成します。gh CLIとClaude Code on the webへのアクセスが必要です。例：/autofix-pr only fix lint errors"
+    "detail": "PRを監視しCIが失敗したとき自動修正をプッシュします。例：/autofix-pr only fix lint errors"
   },
   {
     "command": "/branch",
     "category": "設定・管理",
     "description": "現在の会話のブランチを作成する",
-    "detail": "この時点で現在の会話のブランチを作成します。ブランチに切り替え、元の会話を保持します。/resumeで戻れます。エイリアス: /fork"
+    "detail": "会話のブランチを作成します。/resumeで元に戻れます。例：/branch feature-auth"
   },
   {
     "command": "/fewer-permission-prompts",
     "category": "設定・管理",
     "description": "権限プロンプトを減らすための許可リストを追加する",
-    "detail": "トランスクリプトで一般的な読み取り専用BashとMCPツール呼び出しをスキャンし、プロジェクト .claude/settings.json に優先度付きの許可リストを追加して権限プロンプトを削減します。"
+    "detail": "よく使うツールをスキャンし設定ファイルに許可リストを追加します。"
   },
   {
     "command": "/hooks",
     "category": "設定・管理",
     "description": "フック設定を表示する",
-    "detail": "ツールイベント用のフック設定を表示します。PreToolUse、PostToolUse、Notificationなどのイベントで実行されるシェルコマンドを確認できます。"
+    "detail": "PreToolUse・PostToolUseなどのフック設定を表示します。"
   },
   {
     "command": "/ide",
     "category": "設定・管理",
     "description": "IDE統合を管理する",
-    "detail": "IDE統合を管理し、ステータスを表示します。VS Code、JetBrainsなどとの連携状況を確認できます。"
+    "detail": "VS Code・JetBrainsなどとのIDE統合状況を管理・表示します。"
   },
   {
     "command": "/init",
     "category": "設定・管理",
     "description": "CLAUDE.mdガイドでプロジェクトを初期化する",
-    "detail": "CLAUDE.mdガイドでプロジェクトを初期化します。スキル、フック、個人メモリファイルをウォークスルーするインタラクティブフローも利用可能です（CLAUDE_CODE_NEW_INIT=1を設定）。"
+    "detail": "プロジェクトにCLAUDE.mdを生成します。"
   },
   {
     "command": "/mcp",
     "category": "設定・管理",
     "description": "MCPサーバー接続を管理する",
-    "detail": "MCPサーバー接続とOAuth認証を管理します。接続中のサーバーの確認、追加、削除ができます。"
+    "detail": "MCPサーバー接続とOAuth認証を管理します。"
   },
   {
     "command": "/memory",
     "category": "設定・管理",
     "description": "CLAUDE.mdメモリファイルを編集する",
-    "detail": "CLAUDE.mdメモリファイルを編集し、自動メモリを有効または無効にし、自動メモリエントリを表示します。"
+    "detail": "CLAUDE.mdメモリファイルの編集と自動メモリの管理ができます。"
   },
   {
     "command": "/permissions",
     "category": "設定・管理",
     "description": "ツール権限を管理する",
-    "detail": "ツール権限のアクセス許可、確認、および拒否ルールを管理するインタラクティブダイアログを開きます。スコープ別にルールを表示し、追加・削除できます。エイリアス: /allowed-tools"
+    "detail": "許可・確認・拒否ルールを管理するダイアログを開きます。エイリアス: /allowed-tools"
   },
   {
     "command": "/plugin",
     "category": "設定・管理",
     "description": "Claude Codeプラグインを管理する",
-    "detail": "Claude Codeプラグインを管理します。インストール済みプラグインの確認、追加、削除ができます。"
+    "detail": "プラグインのインストール・確認・削除ができます。"
+  },
+  {
+    "command": "/reload-plugins",
+    "category": "設定・管理",
+    "description": "アクティブなプラグインを再読み込みする",
+    "detail": "再起動せずプラグインの変更を反映します。"
   },
   {
     "command": "/reload-skills",
     "category": "設定・管理",
     "description": "スキルとコマンドディレクトリを再スキャンする",
-    "detail": "スキルとコマンドディレクトリを再スキャンして、セッション中にディスク上で追加または変更されたスキルを再起動なしで利用可能にします。"
+    "detail": "再起動せずスキルの変更を反映します。"
   },
   {
     "command": "/remote-control",
     "category": "設定・管理",
     "description": "このセッションをclaude.aiからリモートコントロール可能にする",
-    "detail": "このセッションをclaude.aiからリモートコントロールできるようにします。別のデバイスから現在のローカルセッションを続行できます。エイリアス: /rc"
+    "detail": "別のデバイスからこのセッションを続行できます。エイリアス: /rc"
   },
   {
     "command": "/remote-env",
     "category": "設定・管理",
     "description": "リモートウェブセッションのデフォルト環境を設定する",
-    "detail": "--remoteで開始されたウェブセッションのデフォルトリモート環境を構成します。"
+    "detail": "--remoteで開始したウェブセッションのデフォルト環境を構成します。"
   },
   {
     "command": "/terminal-setup",
     "category": "設定・管理",
     "description": "ターミナルキーバインディングを設定する",
-    "detail": "Shift+Enterおよびその他のショートカットのターミナルキーバインディングを構成します。VS Code、Cursor、Alacritty、Zedなど必要なターミナルでのみ表示されます。"
+    "detail": "Shift+Enterなどのショートカットを構成します。対応ターミナルのみ表示。"
   },
   {
     "command": "/claude-api",
     "category": "接続・外部サービス",
     "description": "Claude APIリファレンス資料を読み込む",
-    "detail": "プロジェクトの言語（Python、TypeScript、Java、Go、Ruby、C#、PHP）向けのClaude APIリファレンス資料を読み込みます。anthropicまたは@anthropic-ai/sdkをインポートするときに自動でアクティブになります。"
+    "detail": "Claude APIリファレンスを読み込みます。例：/claude-api migrate"
   },
   {
     "command": "/setup-bedrock",
     "category": "接続・外部サービス",
     "description": "Amazon Bedrockを設定する",
-    "detail": "Amazon Bedrock認証、リージョン、モデルピンをインタラクティブウィザードで構成します。CLAUDE_CODE_USE_BEDROCK=1が設定されている場合のみ表示されます。"
+    "detail": "Bedrock認証・リージョン・モデルを設定します。CLAUDE_CODE_USE_BEDROCK=1 が必要。"
   },
   {
     "command": "/setup-vertex",
     "category": "接続・外部サービス",
     "description": "Google Vertex AIを設定する",
-    "detail": "Google Vertex AI認証、プロジェクト、リージョン、モデルピンをインタラクティブウィザードで構成します。CLAUDE_CODE_USE_VERTEX=1が設定されている場合のみ表示されます。"
+    "detail": "Vertex AI認証・プロジェクト・リージョンを設定します。CLAUDE_CODE_USE_VERTEX=1 が必要。"
   },
   {
     "command": "/bug",
     "category": "アカウント・情報",
     "description": "バグを報告する",
-    "detail": "/feedback のエイリアス。フィードバックを送信し、バグを報告するか、会話を共有します。"
+    "detail": "/feedback のエイリアス。バグ報告や会話共有ができます。"
   },
   {
     "command": "/cost",
     "category": "アカウント・情報",
     "description": "セッションコストと使用状況を表示する",
-    "detail": "/usage のエイリアス。セッションコスト、プラン使用制限、アクティビティ統計を表示します。"
+    "detail": "/usage のエイリアス。コスト・使用制限を表示します。"
   },
   {
     "command": "/exit",
     "category": "アカウント・情報",
     "description": "CLIを終了する",
-    "detail": "CLIを終了します。接続されているバックグラウンドセッションではデタッチされ、セッションは実行を続けます。エイリアス: /quit"
+    "detail": "CLIを終了します。バックグラウンドセッションはデタッチして継続。エイリアス: /quit"
   },
   {
     "command": "/feedback",
     "category": "アカウント・情報",
     "description": "フィードバックを送信・バグを報告する",
-    "detail": "フィードバックを送信し、バグを報告するか、会話を共有します。エイリアス: /bug、/share"
+    "detail": "フィードバック送信・バグ報告・会話共有ができます。エイリアス: /bug、/share"
   },
   {
     "command": "/heapdump",
     "category": "アカウント・情報",
-    "description": "メモリ使用量を診断するヒープスナップショットを書き込む",
-    "detail": "JavaScriptヒープスナップショットとメモリ分析を~/Desktopに書き込んで、高いメモリ使用量を診断します。"
+    "description": "メモリ診断用のヒープスナップショットを書き込む",
+    "detail": "高いメモリ使用量を診断するためヒープスナップショットを~/Desktopに出力します。"
   },
   {
     "command": "/help",
@@ -459,13 +465,13 @@
     "command": "/insights",
     "category": "アカウント・情報",
     "description": "セッション分析レポートを生成する",
-    "detail": "Claude Codeセッションを分析するレポートを生成します。プロジェクト領域、相互作用パターン、および摩擦点を含みます。"
+    "detail": "プロジェクト領域・相互作用パターン・摩擦点を含むレポートを生成します。"
   },
   {
     "command": "/login",
     "category": "アカウント・情報",
     "description": "Anthropicアカウントにサインインする",
-    "detail": "Anthropicアカウントにサインインします。ブラウザでOAuth認証フローを開きます。"
+    "detail": "Anthropicアカウントにサインインします。"
   },
   {
     "command": "/logout",
@@ -477,19 +483,19 @@
     "command": "/passes",
     "category": "アカウント・情報",
     "description": "無料1週間を友人と共有する",
-    "detail": "Claude Codeの無料1週間を友人と共有します。アカウントが対象の場合のみ表示されます。"
+    "detail": "Claude Codeの無料1週間を友人と共有します。対象アカウントのみ表示。"
   },
   {
     "command": "/powerup",
     "category": "アカウント・情報",
     "description": "Claude Code機能をインタラクティブに学ぶ",
-    "detail": "アニメーション化されたデモを使用したクイックインタラクティブレッスンを通じてClaude Code機能を発見します。"
+    "detail": "アニメーション付きのインタラクティブレッスンでClaude Code機能を発見します。"
   },
   {
     "command": "/privacy-settings",
     "category": "アカウント・情報",
     "description": "プライバシー設定を表示・更新する",
-    "detail": "プライバシー設定を表示および更新します。Pro、Maxプランサブスクライバーのみ利用可能です。"
+    "detail": "プライバシー設定を表示・更新します。Pro・Maxプランのみ利用可能。"
   },
   {
     "command": "/stats",
@@ -501,7 +507,7 @@
     "command": "/status",
     "category": "アカウント・情報",
     "description": "バージョン・モデル・接続性を表示する",
-    "detail": "設定インターフェース（ステータスタブ）を開いて、バージョン、モデル、アカウント、接続性を表示します。Claudeが応答中でも機能します。"
+    "detail": "バージョン・モデル・アカウント・接続性を表示します。応答中でも動作します。"
   },
   {
     "command": "/stickers",
@@ -513,24 +519,24 @@
     "command": "/team-onboarding",
     "category": "アカウント・情報",
     "description": "チームオンボーディングガイドを生成する",
-    "detail": "Claude Code使用履歴からチームオンボーディングガイドを生成します。過去30日間のセッション、コマンド、MCPサーバー使用状況を分析し、チームメイトが使えるマークダウンガイドを作成します。"
+    "detail": "過去30日のセッション履歴からチーム向けガイドを生成します。"
   },
   {
     "command": "/upgrade",
     "category": "アカウント・情報",
     "description": "より高いプランにアップグレードする",
-    "detail": "アップグレードページを開いて、より高いプランティアに切り替えます。"
+    "detail": "アップグレードページを開いてプランを変更します。"
   },
   {
     "command": "/usage",
     "category": "アカウント・情報",
     "description": "セッションコストと使用状況を表示する",
-    "detail": "セッションコスト、プラン使用制限、アクティビティ統計を表示します。Pro、Max、Team、Enterpriseプランの場合、スキル・サブエージェント・プラグイン・MCPサーバーごとの使用状況の内訳が含まれます。エイリアス: /cost、/stats"
+    "detail": "コスト・使用制限・アクティビティ統計を表示します。エイリアス: /cost、/stats"
   },
   {
     "command": "/usage-credits",
     "category": "アカウント・情報",
     "description": "制限到達後の作業継続のためのcreditsを設定する",
-    "detail": "制限に達したときに作業を続行するためのusage creditsを構成します。以前は /extra-usage"
+    "detail": "制限に達したときに作業を続行するためのusage creditsを構成します。"
   }
 ]
