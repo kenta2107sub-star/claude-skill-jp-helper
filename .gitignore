@@ -1,5 +1,6 @@
 node_modules/
 dist/
+electron/resources/
 CLAUDE.md
 progress.md
 .env
