@@ -360,18 +360,6 @@
     "detail": "CLAUDE.mdガイドでプロジェクトを初期化します。スキル、フック、個人メモリファイルをウォークスルーするインタラクティブフローも利用可能です（CLAUDE_CODE_NEW_INIT=1を設定）。"
   },
   {
-    "command": "/install-github-app",
-    "category": "設定・管理",
-    "description": "Claude GitHub Actionsアプリをセットアップする",
-    "detail": "リポジトリ用のClaude GitHub Actionsアプリをセットアップします。リポジトリを選択して統合を構成するプロセスをガイドします。"
-  },
-  {
-    "command": "/install-slack-app",
-    "category": "設定・管理",
-    "description": "Claude Slackアプリをインストールする",
-    "detail": "Claude SlackアプリをインストールするためのOAuthフローをブラウザで開きます。"
-  },
-  {
     "command": "/mcp",
     "category": "設定・管理",
     "description": "MCPサーバー接続を管理する",
@@ -394,12 +382,6 @@
     "category": "設定・管理",
     "description": "Claude Codeプラグインを管理する",
     "detail": "Claude Codeプラグインを管理します。インストール済みプラグインの確認、追加、削除ができます。"
-  },
-  {
-    "command": "/reload-plugins",
-    "category": "設定・管理",
-    "description": "アクティブなプラグインを再読み込みする",
-    "detail": "すべてのアクティブなプラグインを再読み込みして、再起動せずに保留中の変更を適用します。読み込まれた各コンポーネントのカウントを報告し、読み込みエラーをフラグします。"
   },
   {
     "command": "/reload-skills",
@@ -426,46 +408,10 @@
     "detail": "Shift+Enterおよびその他のショートカットのターミナルキーバインディングを構成します。VS Code、Cursor、Alacritty、Zedなど必要なターミナルでのみ表示されます。"
   },
   {
-    "command": "/web-setup",
-    "category": "設定・管理",
-    "description": "GitHubアカウントをClaude Code on the webに接続する",
-    "detail": "ローカルgh CLI認証情報を使用してGitHubアカウントをClaude Code on the webに接続します。GitHubが接続されていない場合、/scheduleは自動的にこれを求めます。"
-  },
-  {
-    "command": "/chrome",
-    "category": "接続・外部サービス",
-    "description": "Claude in Chrome設定を構成する",
-    "detail": "Claude in Chrome（ブラウザ拡張機能）の設定を構成します。"
-  },
-  {
     "command": "/claude-api",
     "category": "接続・外部サービス",
     "description": "Claude APIリファレンス資料を読み込む",
     "detail": "プロジェクトの言語（Python、TypeScript、Java、Go、Ruby、C#、PHP）向けのClaude APIリファレンス資料を読み込みます。anthropicまたは@anthropic-ai/sdkをインポートするときに自動でアクティブになります。"
-  },
-  {
-    "command": "/desktop",
-    "category": "接続・外部サービス",
-    "description": "現在のセッションをデスクトップアプリで続行する",
-    "detail": "現在のセッションをClaude Codeデスクトップアプリで続行します。macOSとWindowsが必要で、Claudeサブスクリプションが必要です。エイリアス: /app"
-  },
-  {
-    "command": "/mobile",
-    "category": "接続・外部サービス",
-    "description": "モバイルアプリのQRコードを表示する",
-    "detail": "ClaudeモバイルアプリをダウンロードするためのQRコードを表示します。エイリアス: /ios、/android"
-  },
-  {
-    "command": "/radio",
-    "category": "接続・外部サービス",
-    "description": "Claude FM lo-fiラジオを開く",
-    "detail": "Claude FM lo-fiラジオをブラウザで開きます。ブラウザが利用できない場合、ストリームURLを出力します。Bedrock、Vertex、Foundryでは利用できません。"
-  },
-  {
-    "command": "/sandbox",
-    "category": "接続・外部サービス",
-    "description": "サンドボックスモードを切り替える",
-    "detail": "サンドボックスモードを切り替えます。サポートされているプラットフォームでのみ利用可能です。"
   },
   {
     "command": "/setup-bedrock",
@@ -478,12 +424,6 @@
     "category": "接続・外部サービス",
     "description": "Google Vertex AIを設定する",
     "detail": "Google Vertex AI認証、プロジェクト、リージョン、モデルピンをインタラクティブウィザードで構成します。CLAUDE_CODE_USE_VERTEX=1が設定されている場合のみ表示されます。"
-  },
-  {
-    "command": "/teleport",
-    "category": "接続・外部サービス",
-    "description": "ウェブセッションをターミナルに引き込む",
-    "detail": "Claude Code on the webセッションをこのターミナルに引き込みます。ピッカーを開き、ブランチと会話をフェッチします。エイリアス: /tp。claude.aiサブスクリプションが必要です。"
   },
   {
     "command": "/bug",
@@ -558,12 +498,6 @@
     "detail": "プライバシー設定を表示および更新します。Pro、Maxプランサブスクライバーのみ利用可能です。"
   },
   {
-    "command": "/release-notes",
-    "category": "アカウント・情報",
-    "description": "チェンジログを表示する",
-    "detail": "インタラクティブバージョンピッカーでチェンジログを表示します。特定のバージョンを選択してリリースノートを確認できます。"
-  },
-  {
     "command": "/stats",
     "category": "アカウント・情報",
     "description": "使用状況をStatsタブで表示する",
@@ -574,12 +508,6 @@
     "category": "アカウント・情報",
     "description": "バージョン・モデル・接続性を表示する",
     "detail": "設定インターフェース（ステータスタブ）を開いて、バージョン、モデル、アカウント、接続性を表示します。Claudeが応答中でも機能します。"
-  },
-  {
-    "command": "/statusline",
-    "category": "アカウント・情報",
-    "description": "Claude Codeのステータスラインを構成する",
-    "detail": "Claude Codeのステータスラインを構成します。必要な内容を説明するか、引数なしで実行してシェルプロンプトから自動構成します。"
   },
   {
     "command": "/stickers",
