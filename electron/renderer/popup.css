@@ -11,6 +11,7 @@ body {
   -webkit-app-region: no-drag;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   height: 100vh;
   overflow: hidden;
 }
