@@ -30,7 +30,7 @@ body {
 }
 
 .tooltip.hidden {
-  visibility: hidden;
+  display: none;
 }
 
 .tooltip-command {
