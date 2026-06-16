@@ -132,6 +132,7 @@ function showPopup(commands: object): void {
   if (!popupWindow) return;
   const { x, y } = getPopupPosition();
   popupWindow.setBounds({ x, y, width: POPUP_WIDTH, height: POPUP_HEIGHT });
+  popupWindow.webContents.send("hide-tooltip");
   popupWindow.webContents.send("update-commands", commands);
   if (!popupVisible) {
     popupWindow.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });

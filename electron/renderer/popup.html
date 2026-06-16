@@ -22,6 +22,10 @@
     let tooltipVisible = false;
     let hideTimer = null;
 
+    window.api?.onHideTooltip(() => {
+      hideTooltipImmediate();
+    });
+
     window.api?.onCommands((data) => {
       hideTooltipImmediate();
       const list = document.getElementById('list');
