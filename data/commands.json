@@ -126,28 +126,10 @@
     "detail": "Claude Opusを高速出力モードで使用します。例：/fast on"
   },
   {
-    "command": "/focus",
-    "category": "カスタマイズ",
-    "description": "フォーカスビューを切り替える",
-    "detail": "最後のプロンプトと最終応答のみ表示します。例：/focus"
-  },
-  {
-    "command": "/keybindings",
-    "category": "カスタマイズ",
-    "description": "キーバインディング設定ファイルを開く",
-    "detail": "キーバインディング設定ファイルを開くか作成します。例：/keybindings"
-  },
-  {
     "command": "/model",
     "category": "カスタマイズ",
     "description": "AIモデルを切り替える",
     "detail": "引数なしでピッカーを開きます。例：/model claude-sonnet-4-6"
-  },
-  {
-    "command": "/scroll-speed",
-    "category": "カスタマイズ",
-    "description": "マウスホイールのスクロール速度を調整する",
-    "detail": "スクロール速度をインタラクティブに調整します。例：/scroll-speed"
   },
   {
     "command": "/settings",
@@ -160,12 +142,6 @@
     "category": "カスタマイズ",
     "description": "カラーテーマを変更する",
     "detail": "auto、ライト・ダーク、色覚異常対応から選択。例：/theme dark"
-  },
-  {
-    "command": "/tui",
-    "category": "カスタマイズ",
-    "description": "ターミナルUIレンダラーを設定する",
-    "detail": "会話を保持したまま再起動します。例：/tui fullscreen"
   },
   {
     "command": "/voice",
@@ -190,18 +166,6 @@
     "category": "コード品質",
     "description": "ウェブ検索で詳細なリサーチレポートを生成する",
     "detail": "ウェブ検索をファンアウトし引用付きレポートを生成します。例：/deep-research Electronのパフォーマンス最適化"
-  },
-  {
-    "command": "/diff",
-    "category": "コード品質",
-    "description": "インタラクティブなdiffビューアを開く",
-    "detail": "コミットされていない変更と各ターンのdiffを表示します。例：/diff"
-  },
-  {
-    "command": "/doctor",
-    "category": "コード品質",
-    "description": "Claude Codeのインストールと設定を診断する",
-    "detail": "インストールと設定を診断します。「f」で問題を自動修正。例：/doctor"
   },
   {
     "command": "/review",
@@ -342,12 +306,6 @@
     "detail": "PreToolUse・PostToolUseなどのフック設定を表示します。例：/hooks"
   },
   {
-    "command": "/ide",
-    "category": "設定・管理",
-    "description": "IDE統合を管理する",
-    "detail": "VS Code・JetBrainsなどとのIDE統合状況を管理・表示します。例：/ide"
-  },
-  {
     "command": "/init",
     "category": "設定・管理",
     "description": "CLAUDE.mdガイドでプロジェクトを初期化する",
@@ -402,12 +360,6 @@
     "detail": "--remoteで開始したウェブセッションのデフォルト環境を構成します。例：/remote-env"
   },
   {
-    "command": "/terminal-setup",
-    "category": "設定・管理",
-    "description": "ターミナルキーバインディングを設定する",
-    "detail": "Shift+Enterなどのショートカットを構成します。例：/terminal-setup"
-  },
-  {
     "command": "/claude-api",
     "category": "接続・外部サービス",
     "description": "Claude APIリファレンス資料を読み込む",
@@ -436,12 +388,6 @@
     "category": "アカウント・情報",
     "description": "セッションコストと使用状況を表示する",
     "detail": "/usage のエイリアス。コスト・使用制限を表示します。例：/cost"
-  },
-  {
-    "command": "/exit",
-    "category": "アカウント・情報",
-    "description": "CLIを終了する",
-    "detail": "CLIを終了します。バックグラウンドセッションはデタッチして継続。例：/exit"
   },
   {
     "command": "/feedback",
