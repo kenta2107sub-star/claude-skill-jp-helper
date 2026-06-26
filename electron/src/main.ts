@@ -200,13 +200,17 @@ function processKey(e: { keycode: number; shiftKey: boolean; metaKey: boolean; c
   handleTextChange(trackedText);
 }
 
+let lastKeyEventAt = Date.now();
+
 function startKeyMonitor(): void {
   uIOhook.on("keydown", (e: { keycode: number; shiftKey: boolean; metaKey: boolean; ctrlKey: boolean }) => {
+    lastKeyEventAt = Date.now();
     const snapshot = { keycode: e.keycode, shiftKey: e.shiftKey, metaKey: e.metaKey, ctrlKey: e.ctrlKey };
     setImmediate(() => processKey(snapshot));
   });
 
   uIOhook.on("mousedown", () => {
+    lastKeyEventAt = Date.now();
     setImmediate(() => {
       if (trackedText !== "") { trackedText = ""; hidePopup(); }
     });
@@ -214,6 +218,41 @@ function startKeyMonitor(): void {
 
   uIOhook.start();
   console.log("[main] uIOhook started");
+  startHookWatchdog();
+}
+
+function startHookWatchdog(): void {
+  // CGEventTap timeout が続くとフックが無効化される。
+  // stderr に "CGEventTap timeout" が出始めたら uiohook を再起動する。
+  const origStderr = process.stderr.write.bind(process.stderr);
+  let timeoutCount = 0;
+  let restarting = false;
+
+  (process.stderr as unknown as { write: (chunk: unknown, enc?: unknown, cb?: unknown) => boolean }).write = (chunk: unknown, enc?: unknown, cb?: unknown) => {
+    const msg = String(chunk);
+    if (msg.includes("CGEventTap timeout")) {
+      timeoutCount++;
+      if (timeoutCount >= 5 && !restarting) {
+        restarting = true;
+        console.log("[main] CGEventTap timeout detected, restarting uiohook...");
+        try { uIOhook.stop(); } catch { /* ignore */ }
+        setTimeout(() => {
+          try {
+            uIOhook.start();
+            console.log("[main] uIOhook restarted");
+          } catch (err) {
+            console.log("[main] uIOhook restart failed, exiting for LaunchAgent to revive:", err);
+            app.quit();
+          }
+          timeoutCount = 0;
+          restarting = false;
+        }, 1000);
+      }
+    } else {
+      timeoutCount = 0;
+    }
+    return origStderr(chunk as string, enc as BufferEncoding, cb as () => void);
+  };
 }
 
 function keycodeToChar(keycode: number, shift: boolean): string | null {
