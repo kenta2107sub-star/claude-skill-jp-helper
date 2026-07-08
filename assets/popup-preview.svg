@@ -1,0 +1,106 @@
+<svg viewBox="0 0 1000 610" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Sans', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a2a3d"/>
+      <stop offset="100%" stop-color="#121218"/>
+    </linearGradient>
+    <clipPath id="winClip">
+      <rect x="110" y="90" width="780" height="460" rx="14"/>
+    </clipPath>
+    <clipPath id="popupClip">
+      <rect x="150" y="134" width="400" height="340" rx="10"/>
+    </clipPath>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="45"/>
+    </filter>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="1000" height="610" rx="24" fill="url(#bgGrad)"/>
+  <circle cx="110" cy="560" r="150" fill="#DA7756" opacity="0.15" filter="url(#blur)"/>
+  <circle cx="900" cy="80" r="160" fill="#6366F1" opacity="0.18" filter="url(#blur)"/>
+
+  <!-- window shadow -->
+  <rect x="118" y="102" width="780" height="460" rx="14" fill="#000000" opacity="0.35" filter="url(#softShadow)"/>
+
+  <!-- Claude window mockup -->
+  <g clip-path="url(#winClip)">
+    <rect x="110" y="90" width="780" height="460" fill="#F5F1EA"/>
+    <rect x="110" y="90" width="780" height="42" fill="#ECE6D8"/>
+
+    <!-- assistant bubble -->
+    <rect x="140" y="150" width="360" height="72" rx="12" fill="#FFFFFF" stroke="#00000012"/>
+    <rect x="156" y="170" width="300" height="6" rx="3" fill="#D8D2C4"/>
+    <rect x="156" y="188" width="260" height="6" rx="3" fill="#D8D2C4"/>
+    <rect x="156" y="206" width="180" height="6" rx="3" fill="#D8D2C4"/>
+
+    <!-- user bubble -->
+    <rect x="560" y="246" width="290" height="56" rx="12" fill="#DA7756"/>
+    <rect x="578" y="264" width="240" height="6" rx="3" fill="#FFFFFF" opacity="0.75"/>
+    <rect x="578" y="280" width="150" height="6" rx="3" fill="#FFFFFF" opacity="0.75"/>
+
+    <!-- input pill -->
+    <rect x="140" y="478" width="720" height="40" rx="20" fill="#FFFFFF" stroke="#00000014"/>
+    <text x="160" y="503" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700" fill="#6366F1">/</text>
+    <rect x="174" y="490" width="2" height="16" fill="#6366F1" opacity="0.55"/>
+  </g>
+  <rect x="110" y="90" width="780" height="460" rx="14" fill="none" stroke="#00000014"/>
+
+  <!-- title bar dots -->
+  <circle cx="134" cy="111" r="6" fill="#FF5F57"/>
+  <circle cx="152" cy="111" r="6" fill="#FEBC2E"/>
+  <circle cx="170" cy="111" r="6" fill="#28C840"/>
+  <text x="500" y="116" text-anchor="middle" font-size="13" font-weight="600" fill="#8A8578">Claude</text>
+
+  <!-- popup shadow -->
+  <rect x="150" y="134" width="400" height="340" rx="10" fill="#000000" opacity="0.4" filter="url(#softShadow)"/>
+
+  <!-- popup: tooltip + list -->
+  <g clip-path="url(#popupClip)">
+    <rect x="150" y="134" width="400" height="110" fill="#181824"/>
+    <rect x="150" y="244" width="400" height="230" fill="#1E1E1E"/>
+    <rect x="150" y="243" width="400" height="1" fill="#FFFFFF" opacity="0.08"/>
+
+    <!-- tooltip content -->
+    <text x="168" y="161" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#A5B4FC">/compact</text>
+    <text x="168" y="181" font-size="13" font-weight="600" fill="#FFFFFF" opacity="0.9">会話を要約してコンテキストを解放する</text>
+    <text x="168" y="200" font-size="11" fill="#FFFFFF" opacity="0.55">会話をここまで要約しコンテキストを解放します。</text>
+    <text x="168" y="219" font-size="9" font-weight="700" letter-spacing="1" fill="#A5B4FC" opacity="0.75">使用例</text>
+    <text x="168" y="233" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#FFFFFF" opacity="0.8">/compact コード変更に集中して</text>
+
+    <!-- category header -->
+    <text x="168" y="262" font-size="10" font-weight="700" letter-spacing="1" fill="#FFFFFF" opacity="0.4">会話管理</text>
+
+    <!-- selected item highlight -->
+    <rect x="158" y="362" width="384" height="28" rx="5" fill="#6366F1" opacity="0.35"/>
+
+    <!-- items -->
+    <text x="168" y="286" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="600" fill="#A5B4FC">/btw</text>
+    <text x="290" y="286" font-size="12" fill="#FFFFFF" opacity="0.75">履歴を汚さずサイドで質問する</text>
+
+    <text x="168" y="318" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="600" fill="#A5B4FC">/checkpoint</text>
+    <text x="290" y="318" font-size="12" fill="#FFFFFF" opacity="0.75">前の時点に巻き戻す</text>
+
+    <text x="168" y="350" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="600" fill="#A5B4FC">/clear</text>
+    <text x="290" y="350" font-size="12" fill="#FFFFFF" opacity="0.75">空のコンテキストで開始する</text>
+
+    <text x="168" y="382" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700" fill="#A5B4FC">/compact</text>
+    <text x="290" y="382" font-size="12" fill="#FFFFFF" opacity="0.9">要約してコンテキストを解放する</text>
+
+    <text x="168" y="414" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="600" fill="#A5B4FC">/context</text>
+    <text x="290" y="414" font-size="12" fill="#FFFFFF" opacity="0.75">使用状況を可視化する</text>
+
+    <text x="168" y="446" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="600" fill="#A5B4FC">/copy</text>
+    <text x="290" y="446" font-size="12" fill="#FFFFFF" opacity="0.75">最後の応答をコピーする</text>
+  </g>
+  <rect x="150" y="134" width="400" height="340" rx="10" fill="none" stroke="#A5B4FC" stroke-opacity="0.25"/>
+
+  <!-- callout -->
+  <path d="M 640 90 Q 590 110 555 138" fill="none" stroke="#DA7756" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="555" cy="138" r="3.5" fill="#DA7756"/>
+  <rect x="620" y="52" width="260" height="42" rx="21" fill="#DA7756"/>
+  <text x="750" y="78" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">「/」入力で自動ポップアップ表示</text>
+</svg>
